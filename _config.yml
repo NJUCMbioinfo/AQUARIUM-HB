@@ -1,2 +1,27 @@
-title: My Profile
-theme: jekyll-theme-minimal
+title: My Profile  
+description: "A comprehensive pipeline for identifying, annotating, quantifying, and analyzing human blood circular RNAs from RNA-seq data."  
+theme: jekyll-theme-minimal  
+
+# 网站URL  
+url: "https://yourusername.github.io/repository-name" # 替换为您的 GitHub 页面 URL  
+
+# 导航菜单  
+navigation:  
+  - title: Home  
+    url: /  
+  - title: Pipeline Overview  
+    url: /pipeline  
+  - title: Resources  
+    url: /resources  
+  - title: Contact  
+    url: /contact  
+
+# 使用 Markdown 的格式化选项  
+markdown: kramdown  
+kramdown:  
+  input: GFM  
+
+# 插件  
+plugins:  
+  - jekyll-feed  
+  - jekyll-seo-tag  
