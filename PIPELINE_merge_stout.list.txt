@@ -1,0 +1,63 @@
+# Suppress warnings and package startup messages
+options(warn = -1)
+suppressPackageStartupMessages({
+  library(data.table)
+  library(tidyr)
+  library(plyr)
+  library(dplyr)
+  library(parallel)
+})
+
+# Parse arguments from the command line
+args <- commandArgs(trailingOnly = TRUE)
+
+# Argument handling
+# Expecting the following arguments: 
+# --datasetname : dataset name 
+# --input : path to the input file (file listing sample file paths) 
+# --output : path to the output file
+
+# Initialize default values for arguments
+datasetname <- NULL
+filepath <- NULL
+outputpath <- NULL
+
+# Loop through arguments to assign them based on their flag
+for (i in seq(1, length(args), by = 2)) {
+  if (args[i] == "--datasetname") {
+    datasetname <- args[i + 1]
+  } else if (args[i] == "--input") {
+    filepath <- args[i + 1]
+  } else if (args[i] == "--output") {
+    outputpath <- args[i + 1]
+  }
+}
+
+# Read the input file (list of file paths and sample IDs)
+filetable <- fread(filepath, data.table = FALSE)
+
+# Initialize an empty dataframe to store the merged data
+stout.list.allsample <- data.frame()
+
+# Iterate through each sample and read its respective data file
+for (index in 1:nrow(filetable)) {
+  sampleID <- filetable$sampleID[index]  # Extract sample ID
+  stout.list <- fread(filetable$filepath[index], data.table = FALSE)  # Read the stout list file
+  
+  # Rename the columns to match the expected format
+  names(stout.list) <- c("Image_ID", "bsj", "Chr", "start", "end", "total_exp", 
+                         "isoform_number", "isoform_exp", "isoform_length", 
+                         "isoform_state", "strain", "gene_id", "isoform_cirexon")
+  
+  # Add sampleID and datasetname columns to the current dataframe
+  stout.list$sampleID <- sampleID
+  stout.list$datasetname <- datasetname
+  
+  # Append the current stout.list to the overall dataframe
+  stout.list.allsample <- rbind(stout.list.allsample, stout.list)
+}
+
+# Write the final merged dataframe to the specified output path
+write.table(stout.list.allsample, file = outputpath, sep = "\t", quote = FALSE, 
+            col.names = TRUE, append = FALSE, row.names = FALSE)
+
