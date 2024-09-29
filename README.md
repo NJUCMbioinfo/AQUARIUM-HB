@@ -1,8 +1,7 @@
 # AQUARIUM-HB
 A pipeline to identify, annotate, quantify and analyze human blood circular RNAs from RNA-seq data
 
-(1) . download Full-Length circRNAs from Nanopore Sequencing Datasets
-In this initial step, we aim to gather full-length circular RNAs (circRNAs) for downstream analyses. We utilize resources provided by the FLcircAS and IsoCirc databases:
+(1) . Download Full-Length circRNAs from Nanopore Sequencing Datasets
 
 All circRNA from FLcircAS:
 https://drive.google.com/file/d/1jjMEzCEEaUaUHrJZLME5O5_8fbsmYU6q/view?usp=drive_link
@@ -10,7 +9,6 @@ https://drive.google.com/file/d/1jjMEzCEEaUaUHrJZLME5O5_8fbsmYU6q/view?usp=drive
 All circRNA from IsoCirc:
 https://drive.google.com/file/d/1oLk3MDw4kTZDzO7iA9nSNmDLoKqKxYSx/view?usp=drive_link
 
-By integrating these resources, we can obtain a rich dataset of circRNA information that serves as the foundation for subsequent data analysis.
 
 (2) . Detection of circRNAs from RNA-seq Data
 In this step, we focus on detecting circRNAs from RNA-seq data, using example datasets downloaded from project ID PRJNA722046, which can be accessed through NCBI SRA.
