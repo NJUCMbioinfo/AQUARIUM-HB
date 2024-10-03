@@ -16,12 +16,3 @@ navigation:
   - title: Contact  
     url: /contact  
 
-# 使用 Markdown 的格式化选项  
-markdown: kramdown  
-kramdown:  
-  input: GFM  
-
-# 插件  
-plugins:  
-  - jekyll-feed  
-  - jekyll-seo-tag  
