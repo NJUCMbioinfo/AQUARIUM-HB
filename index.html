@@ -1,77 +1,69 @@
-<!DOCTYPE html>  
-<html lang="zh">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>人类血液环状RNA分析管道</title>  
-    <link rel="stylesheet" href="styles.css"> <!-- 如果有样式文件的话 -->  
-</head>  
-<body>  
-    <header>  
-        <h1>人类血液环状RNA分析管道</h1>  
-    </header>  
-    <main>  
-        <section>  
-            <h2>步骤概述</h2>  
-            <p>本文介绍了从RNA-seq数据中识别、注释、定量和分析人类血液环状RNA的完整流程。</p>  
-        </section>  
+/* styles.css */  
 
-        <section>  
-            <h2>1. 下载全长circRNA数据</h2>  
-            <p>从以下Nanopore测序数据集中下载全长circRNA：</p>  
-            <ul>  
-                <li><a href="https://drive.google.com/file/d/1jjMEzCEEaUaUHrJZLME5O5_8fbsmYU6q/view?usp=drive_link">FLcircAS中的所有circRNA</a></li>  
-                <li><a href="https://drive.google.com/file/d/1oLk3MDw4kTZDzO7iA9nSNmDLoKqKxYSx/view?usp=drive_link">IsoCirc中的所有circRNA</a></li>  
-            </ul>  
-        </section>  
+body {  
+    font-family: Arial, sans-serif; /* 设置字体 */  
+    line-height: 1.6; /* 行间距 */  
+    margin: 0;  
+    padding: 0;  
+    background-color: #f4f4f4; /* 背景色 */  
+}  
 
-        <section>  
-            <h2>2. 从RNA-seq数据检测circRNA</h2>  
-            <p>本步骤集中在从RNA-seq数据中检测circRNA，使用下载的示例数据集（项目ID：PRJNA722046）。</p>  
-            <p>可以通过以下命令执行检测：</p>  
-            <pre><code>$ sh pipeline_detection.sh SRR14240730</code></pre>  
-            <p>该命令将自动运行我们的检测脚本，输出的详细信息可在CIRI Cookbook中找到。</p>  
-        </section>  
+header {  
+    background: #35424a; /* 头部背景色 */  
+    color: #ffffff; /* 头部文本颜色 */  
+    padding: 20px 0; /* 头部上下内边距 */  
+    text-align: center; /* 中央对齐 */  
+}  
 
-        <section>  
-            <h2>3. 构建人类血液circRNA参考库</h2>  
-            <p>该步骤的目标是构建一个综合参考库，其中包含来自全长circRNA的信息。</p>  
+h1 {  
+    margin: 0;  
+}  
 
-            <h3>3.1 整合来自CIRI输出的全长circRNA</h3>  
-            <p>执行以下命令以整合从CIRI输出中获得的全长circRNA：</p>  
-            <pre><code>$ Rscript PIPELINE_merge_stout.list.R --datasetname PRJNA722046 --input filepath_stout.list.txt --output stout.list.allsample.txt</code></pre>  
-            <p>该命令有效地合并了多个样本中的circRNA数据，以便进一步分析。</p>  
+h2 {  
+    color: #35424a; /* 二级标题颜色 */  
+}  
 
-            <h3>3.2 制作人类血液circRNA参考</h3>  
-            <p>使用以下脚本生成最终的circRNA参考列表：</p>  
-            <pre><code>$ Rscript PIPELINE_make_reference.R --input stout.list.allsample.txt --output CircRNA_Reference.txt</code></pre>  
-            <p>输出文件CircRNA_Reference.txt将包含来自FLcircAS、IsoCirc和RNA-seq数据的circRNA信息。</p>  
-        </section>  
+h3 {  
+    color: #666; /* 三级标题颜色 */  
+}  
 
-        <section>  
-            <h2>4. 完成部分circRNA</h2>  
-            <p>在此步骤中，我们旨在填补部分circRNA的缺失信息，以确保数据的完整性。</p>  
-            <p>执行以下命令：</p>  
-            <pre><code>$ Rscript make.circRNA_full.gtf.sample.R SRR14240730  
-$ Rscript make.circRNA_break.gtf.sample.R SRR14240730  
-$ Rscript make.circRNA_only.gtf.sample.R SRR14240730</code></pre>  
-            <p>这些命令生成与每个样本对应的circRNA相关数据，从而增强我们数据集的准确性和可靠性。</p>  
-        </section>  
+main {  
+    max-width: 800px; /* 最大宽度 */  
+    margin: 20px auto; /* 自动左右居中 */  
+    padding: 20px; /* 内边距 */  
+    background: #ffffff; /* 主体背景色 */  
+    border-radius: 8px; /* 圆角 */  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */  
+}  
 
-        <section>  
-            <h2>5. 整合血液circRNA数据</h2>  
-            <p>在此阶段，我们整合提取的circRNA信息与样本数据。运行以下命令：</p>  
-            <pre><code>$ Rscript make.circRNAgtf_to_isoformID.R filepath_stout.list.txt</code></pre>  
-            <p>此步骤确保来自不同来源的circRNA数据能够有效结合，为后续分析奠定坚实基础。</p>  
-        </section>  
+section {  
+    margin-bottom: 20px; /* 每个段落之间的间距 */  
+}  
 
-        <section>  
-            <h2>6. 环状RNA的注释</h2>  
-            <p>最后，我们对整合的circRNA数据进行注释。这一步为circRNA提供生物学相关性，有助于理解它们的功能及作为生物标志物的潜力。</p>  
-        </section>  
-    </main>  
-    <footer>  
-        <p>? 2023 你的名字. 保留所有权利.</p>  
-    </footer>  
-</body>  
-</html>
+ul {  
+    list-style-type: none; /* 去掉列表前的符号 */  
+    padding: 0; /* 去掉内边距 */  
+}  
+
+ul li {  
+    margin-bottom: 10px; /* 列表项之间的间距 */  
+}  
+
+a {  
+    color: #007bff; /* 链接颜色 */  
+    text-decoration: none; /* 去掉下划线 */  
+}  
+
+a:hover {  
+    text-decoration: underline; /* 悬停时下划线 */  
+}  
+
+footer {  
+    text-align: center; /* 中央对齐 */  
+    padding: 10px 0; /* 内边距 */  
+    background: #35424a; /* 底部背景色 */  
+    color: #ffffff; /* 底部文本颜色 */  
+    position: relative; /* 相对定位 */  
+    bottom: 0; /* 底部位置 */  
+    width: 100%; /* 满宽度 */  
+}
