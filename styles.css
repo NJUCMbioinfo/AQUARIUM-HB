@@ -1,0 +1,30 @@
+stout.list_allsample.list <- list()  
+
+# Iterate through each sample and read its respective data file  
+for (index in 1:nrow(filetable)) {  
+  # 尝试读取 stout list 文件  
+  tryCatch({  
+    stout.list <- fread(filetable[index, 1], data.table = FALSE)  # Read the stout list file  
+
+    # 检查数据框是否为空  
+    if (nrow(stout.list) == 0) {  
+      cat("Warning: The file", filetable[index, 1], "is empty and will be skipped.\n")  
+      next  # 跳过空文件  
+    }  
+
+    # Rename the columns to match the expected format  
+    names(stout.list) <- c("Image_ID", "bsj", "chr", "start", "end", "total_exp",   
+                           "isoform_number", "isoform_exp", "isoform_length",   
+                           "isoform_state", "strand", "gene_id", "isoform_cirexon")  
+
+    stout.list <- stout.list[, c("chr", "bsj", "start", "end", "isoform_state", "strand", "isoform_cirexon")]				   
+
+    # Append the current stout.list to the overall dataframe  
+    stout.list_allsample.list[[index]] <- stout.list   
+
+  }, error = function(e) {  
+    # 如果发生错误，输出对应的文件名和错误信息  
+    cat("Error: Unable to read the file", filetable[index, 1], "\n")  
+    cat("Error message:", conditionMessage(e), "\n")  
+  })  
+}
