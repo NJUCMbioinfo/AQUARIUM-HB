@@ -7,19 +7,20 @@
     <style>  
         body {  
             display: flex;  
-            flex-direction: column; /* 使子元素垂直排列 */  
-            min-height: 100vh; /* 最小高度为视口高度 */  
             margin: 0;  
             background-color: #f4f4f4;  
             font-family: Arial, sans-serif;  
-        }  
+        }   
 
         nav {  
+            position: fixed; /* 固定导航栏位置 */  
             width: 200px;  
+            height: 100vh; /* 确保导航栏占据整个高度 */  
             background-color: #35424a;  
             padding: 15px;  
             color: #ffffff;  
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);  
+            overflow-y: auto; /* 允许导航栏滚动（如果内容超出） */  
         }  
 
         nav h2 {  
@@ -45,13 +46,15 @@
         }  
 
         main {  
+            margin-left: 220px; /* 确保主内容区域不被导航栏遮挡 */  
             padding: 20px;  
             flex: 1; /* 让主内容区占用剩余空间 */  
             max-width: 800px;  
             background: #ffffff;  
             border-radius: 8px;  
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  
-            margin-left: 20px;  
+            height: 100vh; /* 主内容区域占满视口高度 */  
+            overflow-y: auto; /* 允许主内容区域滚动 */  
         }  
 
         footer {  
