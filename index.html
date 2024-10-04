@@ -68,6 +68,14 @@
             margin: 10px 0;               /* 上下边距 */  
             font-family: 'Courier New', Courier, monospace; /* 代码字体 */  
         }  
+
+        /* 图片样式 */  
+        img.pipeline-img {  
+            max-width: 100%; /* 让图片自适应宽度（不超出容器） */  
+            height: auto; /* 保持图片纵横比 */  
+            border-radius: 5px; /* 图片圆角 */  
+            margin: 20px 0; /* 上下边距 */  
+        }  
     </style>  
 </head>  
 <body>  
@@ -87,6 +95,8 @@
         <section id="overview">  
             <h2>Overview</h2>  
             <p>This document describes the complete process of identifying, annotating, quantifying, and analyzing circular RNAs from RNA-seq data in human blood.</p>  
+            <!-- 插入图片 -->  
+            <img src="pipeline.png" alt="RNA Analysis Pipeline" class="pipeline-img">  
         </section>  
 
         <section id="download">  
