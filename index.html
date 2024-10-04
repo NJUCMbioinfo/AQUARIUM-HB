@@ -51,7 +51,7 @@
             margin-left: 220px; /* 确保主内容区域不被导航栏遮挡 */  
             padding: 20px;  
             flex: 1; /* 让主内容区占用剩余空间 */  
-            max-width: 1600px;  
+            max-width: 1200px;  
             background: #ffffff;  
             border-radius: 8px;  
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  
@@ -71,10 +71,13 @@
 
         /* 图片样式 */  
         img.pipeline-img {  
-            max-width: 100%; /* 让图片自适应宽度（不超出容器） */  
+            max-width: 80%; /* 限制最大宽度为页面的80% */  
             height: auto; /* 保持图片纵横比 */  
             border-radius: 5px; /* 图片圆角 */  
             margin: 20px 0; /* 上下边距 */  
+            display: block; /* 让图片块显示，避免底部间隙 */  
+            margin-left: auto; /* 使图片居中显示 */  
+            margin-right: auto; /* 使图片居中显示 */  
         }  
     </style>  
 </head>  
