@@ -69,16 +69,17 @@
             font-family: 'Courier New', Courier, monospace; /* 代码字体 */  
         }  
 
-        /* 图片样式 */  
-        img.pipeline-img {  
-            max-width: 80%; /* 限制最大宽度为页面的80% */  
-            height: auto; /* 保持图片纵横比 */  
-            border-radius: 5px; /* 图片圆角 */  
-            margin: 20px 0; /* 上下边距 */  
-            display: block; /* 让图片块显示，避免底部间隙 */  
-            margin-left: auto; /* 使图片居中显示 */  
-            margin-right: auto; /* 使图片居中显示 */  
-        }  
+/* 图片样式 */  
+img.pipeline-img {  
+    max-width: 60%; /* 让图片自适应宽度（不超出容器） */  
+    max-height: 400px; /* 设置最大高度为400像素 */  
+    height: auto; /* 保持图片纵横比 */  
+    border-radius: 5px; /* 图片圆角 */  
+    margin: 20px 0; /* 上下边距 */  
+    display: block; /* 让图片块显示，避免底部间隙 */  
+    margin-left: auto; /* 使图片居中显示 */  
+    margin-right: auto; /* 使图片居中显示 */  
+}   
     </style>  
 </head>  
 <body>  
