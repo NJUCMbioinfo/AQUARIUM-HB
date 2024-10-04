@@ -1,9 +1,9 @@
 <!DOCTYPE html>  
-<html lang="zh">  
+<html lang="en">  
 <head>  
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>人类血液环状RNA分析管道</title>  
+    <title>Circular RNA Analysis Pipeline for Human Blood</title>  
     <link rel="stylesheet" href="styles.css"> <!-- 确保样式文件路径正确 -->  
     <style>  
         /* 这里是内联样式表，仅用于示例，实际应用中可放入 styles.css 文件 */  
@@ -64,79 +64,79 @@
 </head>  
 <body>  
     <nav>  
-        <h2>导航</h2>  
+        <h2>Navigation</h2>  
         <ul>  
-            <li><a href="#overview">步骤概述</a></li>  
-            <li><a href="#download">下载全长circRNA数据</a></li>  
-            <li><a href="#detection">检测circRNA</a></li>  
-            <li><a href="#reference">构建参考库</a></li>  
-            <li><a href="#completion">完成部分circRNA</a></li>  
-            <li><a href="#integration">整合血液circRNA数据</a></li>  
-            <li><a href="#annotation">注释circRNA</a></li>  
+            <li><a href="#overview">Overview</a></li>  
+            <li><a href="#download">Download Full-length circRNA Data</a></li>  
+            <li><a href="#detection">Detect circRNA from RNA-seq Data</a></li>  
+            <li><a href="#reference">Construct Reference Library</a></li>  
+            <li><a href="#completion">Complete Partial circRNA</a></li>  
+            <li><a href="#integration">Integrate Blood circRNA Data</a></li>  
+            <li><a href="#annotation">Annotate circRNA</a></li>  
         </ul>  
     </nav>  
     <main>  
         <section id="overview">  
-            <h2>步骤概述</h2>  
-            <p>本文介绍了从 RNA-seq 数据中识别、注释、定量和分析人类血液环状 RNA 的完整流程。</p>  
+            <h2>Overview</h2>  
+            <p>This document describes the complete process of identifying, annotating, quantifying, and analyzing circular RNAs from RNA-seq data in human blood.</p>  
         </section>  
 
         <section id="download">  
-            <h2>1. 下载全长 circRNA 数据</h2>  
-            <p>从以下 Nanopore 测序数据集中下载全长 circRNA：</p>  
+            <h2>1. Download Full-length circRNA Data</h2>  
+            <p>Download full-length circRNAs from the following Nanopore sequencing datasets:</p>  
             <ul>  
-                <li><a href="https://drive.google.com/file/d/1jjMEzCEEaUaUHrJZLME5O5_8fbsmYU6q/view?usp=drive_link">FLcircAS 中的所有 circRNA</a></li>  
-                <li><a href="https://drive.google.com/file/d/1oLk3MDw4kTZDzO7iA9nSNmDLoKqKxYSx/view?usp=drive_link">IsoCirc 中的所有 circRNA</a></li>  
+                <li><a href="https://drive.google.com/file/d/1jjMEzCEEaUaUHrJZLME5O5_8fbsmYU6q/view?usp=drive_link">All circRNAs in FLcircAS</a></li>  
+                <li><a href="https://drive.google.com/file/d/1oLk3MDw4kTZDzO7iA9nSNmDLoKqKxYSx/view?usp=drive_link">All circRNAs in IsoCirc</a></li>  
             </ul>  
         </section>  
 
         <section id="detection">  
-            <h2>2. 从 RNA-seq 数据检测 circRNA</h2>  
-            <p>本步骤集中在从 RNA-seq 数据中检测 circRNA，使用下载的示例数据集（项目 ID：PRJNA722046）。</p>  
-            <p>您可以通过以下命令执行检测：</p>  
+            <h2>2. Detect circRNA from RNA-seq Data</h2>  
+            <p>This step focuses on detecting circRNA from RNA-seq data using the downloaded sample dataset (Project ID: PRJNA722046).</p>  
+            <p>You can execute detection using the following command:</p>  
             <pre><code>$ sh pipeline_detection.sh SRR14240730</code></pre>  
-            <p>该命令将自动运行我们的检测脚本，输出的详细信息可在 CIRI Cookbook 中找到。</p>  
+            <p>This command will automatically run our detection script, and detailed output can be found in the CIRI Cookbook.</p>  
         </section>  
 
         <section id="reference">  
-            <h2>3. 构建人类血液 circRNA 参考库</h2>  
-            <p>该步骤的目标是构建一个综合参考库，其中包含来自全长 circRNA 的信息。</p>  
+            <h2>3. Construct Reference Library for Human Blood circRNA</h2>  
+            <p>The goal of this step is to build a comprehensive reference library containing information from full-length circRNAs.</p>  
 
-            <h3>3.1 整合来自 CIRI 输出的全长 circRNA</h3>  
-            <p>执行以下命令以整合从 CIRI 输出中获得的全长 circRNA：</p>  
+            <h3>3.1 Integrate Full-length circRNA from CIRI Output</h3>  
+            <p>Execute the following command to integrate the full-length circRNA obtained from CIRI output:</p>  
             <pre><code>$ Rscript PIPELINE_merge_stout.list.R --datasetname PRJNA722046 --input filepath_stout.list.txt --output stout.list.allsample.txt</code></pre>  
-            <p>该命令有效地合并多个样本中的 circRNA 数据，以便进一步分析。</p>  
+            <p>This command effectively combines circRNA data from multiple samples for further analysis.</p>  
 
-            <h3>3.2 制作人类血液 circRNA 参考</h3>  
-            <p>使用以下脚本生成最终的 circRNA 参考列表：</p>  
+            <h3>3.2 Generate CircRNA Reference for Human Blood</h3>  
+            <p>Use the following script to generate the final circRNA reference list:</p>  
             <pre><code>$ Rscript PIPELINE_make_reference.R --input stout.list.allsample.txt --output CircRNA_Reference.txt</code></pre>  
-            <p>输出文件 CircRNA_Reference.txt 将包含来自 FLcircAS、IsoCirc 和 RNA-seq 数据的 circRNA 信息。</p>  
+            <p>The output file CircRNA_Reference.txt will contain circRNA information from FLcircAS, IsoCirc, and RNA-seq data.</p>  
         </section>  
 
         <section id="completion">  
-            <h2>4. 完成部分 circRNA</h2>  
-            <p>在此步骤中，我们旨在填补部分 circRNA 的缺失信息，以确保数据的完整性。</p>  
-            <p>执行以下命令：</p>  
+            <h2>4. Complete Partial circRNA</h2>  
+            <p>In this step, we aim to fill in the missing information of partial circRNAs to ensure data integrity.</p>  
+            <p>Execute the following commands:</p>  
             <pre><code>$ Rscript make.circRNA_full.gtf.sample.R SRR14240730  
 $ Rscript make.circRNA_break.gtf.sample.R SRR14240730  
 $ Rscript make.circRNA_only.gtf.sample.R SRR14240730</code></pre>  
-            <p>这些命令生成与每个样本对应的 circRNA 相关数据，从而增强我们数据集的准确性和可靠性。</p>  
+            <p>These commands generate circRNA-related data corresponding to each sample, enhancing the accuracy and reliability of our dataset.</p>  
         </section>  
 
         <section id="integration">  
-            <h2>5. 整合血液 circRNA 数据</h2>  
-            <p>在此阶段，我们整合提取的 circRNA 信息与样本数据。运行以下命令：</p>  
+            <h2>5. Integrate Blood circRNA Data</h2>  
+            <p>In this stage, we integrate extracted circRNA information with sample data. Run the following command:</p>  
             <pre><code>$ Rscript make.circRNAgtf_to_isoformID.R filepath_stout.list.txt</code></pre>  
-            <p>此步骤确保来自不同来源的 circRNA 数据能够有效结合，为后续分析奠定坚实基础。</p>  
+            <p>This step ensures that circRNA data from different sources can be effectively combined, laying a solid foundation for subsequent analysis.</p>  
         </section>  
 
         <section id="annotation">  
-            <h2>6. 环状 RNA 的注释</h2>  
-            <p>最后，我们对整合的 circRNA 数据进行注释。这一步为 circRNA 提供生物学相关性，有助于理解它们的功能及作为生物标志物的潜力。</p>  
+            <h2>6. Annotate circRNA</h2>  
+            <p>Finally, we annotate the integrated circRNA data. This step provides biological relevance to circRNAs and helps understand their functions and potential as biomarkers.</p>  
         </section>  
     </main>  
     <footer>  
-        <p>? 2023 你的名字. 保留所有权利.</p>  
+        <p>? 2023 Yuan Shaoxun. All rights reserved.</p>  
     </footer>  
 </body>  
 </html>
