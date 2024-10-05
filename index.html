@@ -96,20 +96,23 @@
     margin: 10px 0;              /* 上下边距 */  
     width: 100%;                 /* 宽度设置为100% */  
     border-collapse: collapse;    /* 边框合并，避免双重边框 */  
+    overflow-x: auto;            /* 允许横向滚动 */  
 }  
 
-.data-example th,  
-.data-example td {  
-    padding: 15px;               /* 单元格内边距 */  
+.data-datatable th,  
+.data-datatable td {  
+    padding: 20px;               /* 单元格内边距 */  
     border: 1px solid #ffcc00;  /* 单元格边框 */  
     text-align: left;            /* 左对齐文本 */  
     font-family: 'Courier New', Courier, monospace; /* 代码字体 */  
 }  
 
-.data-example th {  
+.data-datatable th {  
     background-color: #ffe6a8;  /* 表头背景颜色 */  
-}
-    </style>  
+}  
+</style>  
+
+
 </head>  
 <body>  
     <nav>  
@@ -176,7 +179,7 @@ PRJNA352396/SRR4888624/detection/full/vis/stout.list
 
             <h4>Output Data Example</h4>  
             <div style="overflow-x: auto; margin: 10px 0;">  
-                <table class="data-datatable" border="1" style="border-collapse: collapse; width: 100%;">  
+                <table class="data-datatable">  
                     <thead>  
                         <tr>  
                             <th>chr</th>  
@@ -278,7 +281,7 @@ PRJNA352396/SRR4888624/detection/full/vis/stout.list
                         </tr>  
                     </tbody>  
                 </table>  
-            </div>
+            </div>  
 
             <h3>3.2 Generate CircRNA Reference for Human Blood</h3>  
             <p>Use the following script to generate the final circRNA reference list:</p>  
