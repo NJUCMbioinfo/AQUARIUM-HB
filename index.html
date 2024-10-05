@@ -58,29 +58,34 @@
             overflow-y: auto; /* 允许主内容区滚动 */  
         }  
 
-        /* 代码块样式 */  
-        .code-block {  
-            background-color: #e7f4ff;  /* 背景颜色 */  
-            border: 1px solid #007bff;   /* 边框颜色 */  
-            border-radius: 5px;          /* 边框圆角 */  
-            padding: 10px;                /* 内边距 */  
-            overflow-x: auto;             /* 允许横向滚动 */  
-            margin: 10px 0;               /* 上下边距 */  
-            font-family: 'Courier New', Courier, monospace; /* 代码字体 */  
-        }  
+/* 代码块样式 */  
+.code-block {  
+    background-color: #e7f4ff;  /* 背景颜色 */  
+    border: 1px solid #007bff;   /* 边框颜色 */  
+    border-radius: 5px;          /* 边框圆角 */  
+    padding: 10px;                /* 内边距 */  
+    overflow-x: auto;             /* 允许横向滚动 */  
+    margin: 10px 0;               /* 上下边距 */  
+    font-family: 'Courier New', Courier, monospace; /* 代码字体 */  
+    text-align: left;             /* 左对齐文本 */  
+    white-space: nowrap;          /* 内容不换行，直至需要滚动 */  
+    max-width: 100%;              /* 最大宽度，防止溢出 */  
+    box-sizing: border-box;       /* 确保内边距和边框计算在宽度内 */  
+}    
   
 /* 示例输入框样式 */  
 .data-example {  
     background-color: #fff8e7;  /* 背景颜色 */  
     border: 2px solid #ffcc00;  /* 边框样式和颜色 */  
     border-radius: 5px;          /* 边框圆角 */  
-    padding: 10px;                /* 内边距 */  
-    overflow-x: auto;             /* 允许横向滚动 */  
-    margin: 10px 0;               /* 上下边距 */  
+    padding: 10px;               /* 内边距 */  
+    overflow-x: auto;            /* 允许横向滚动 */  
+    margin: 10px 0;              /* 上下边距 */  
     font-family: 'Courier New', Courier, monospace; /* 代码字体 */  
-    white-space: pre-wrap; /* 保持空格和换行 */  
-    text-align: left; /* 左对齐文本 */  
-}
+    white-space: nowrap;         /* 内容不换行，直至需要滚动 */  
+    max-width: 100%;             /* 最大宽度，防止溢出 */  
+    box-sizing: border-box;      /* 确保内边距和边框计算在宽度内 */  
+}  
     </style>  
 </head>  
 <body>  
@@ -148,7 +153,7 @@ PRJNA352396/SRR4888624/detection/full/vis/stout.list
 
             <h4>Output Data Example</h4>  
             <div class="data-example">  
-                chr     bsj     start   end     isoformID       isoform_state   strand  exon_count      exon_length     exon_total_length<br> 
+chr     bsj     start   end     isoformID       isoform_state   strand  exon_count      exon_length     exon_total_length<br> 
 5       5:73074742|73077493     73074742        73077493        chr5|73074742,73077338|73074853,73077493|+      Full    +       2       112,156 268<br> 
 X       X:1188454|1188569       1188454 1188569 chrX|1188454,1188460|1188459,1188569|+  Full    +       2       6,110   116<br> 
 10      10:5794885|5800705      5794885 5800705 chr10|5794885,5800598|5795019,5800705|- Full    -       2       135,108 243<br> 
