@@ -73,18 +73,26 @@
     box-sizing: border-box;       /* 确保内边距和边框计算在宽度内 */  
 }    
   
-/* 示例输入框样式 */  
+/* 表格样式 */  
 .data-example {  
     background-color: #fff8e7;  /* 背景颜色 */  
     border: 2px solid #ffcc00;  /* 边框样式和颜色 */  
     border-radius: 5px;          /* 边框圆角 */  
-    padding: 10px;               /* 内边距 */  
-    overflow-x: auto;            /* 允许横向滚动 */  
     margin: 10px 0;              /* 上下边距 */  
+    width: 100%;                 /* 宽度设置为100% */  
+    border-collapse: collapse;    /* 边框合并，避免双重边框 */  
+}  
+
+.data-example th,  
+.data-example td {  
+    padding: 10px;               /* 单元格内边距 */  
+    border: 1px solid #ffcc00;  /* 单元格边框 */  
+    text-align: left;            /* 左对齐文本 */  
     font-family: 'Courier New', Courier, monospace; /* 代码字体 */  
-    white-space: pre;            /* 保持制表符和空格格式 */  
-    max-width: 100%;             /* 最大宽度，防止溢出 */  
-    box-sizing: border-box;      /* 确保内边距和边框计算在宽度内 */  
+}  
+
+.data-example th {  
+    background-color: #ffe6a8;  /* 表头背景颜色 */  
 }
     </style>  
 </head>  
@@ -152,16 +160,108 @@ PRJNA352396/SRR4888624/detection/full/vis/stout.list
             </div>  
 
             <h4>Output Data Example</h4>  
-            <div class="data-example">  
-chr     bsj             start      end         isoformID                                           isoform_state   strand  exon_count   exon_length   exon_total_length<br>   
-5       5:73074742|73077493  73074742   73077493   chr5|73074742,73077338|73074853,73077493|+    Full            +       2           112,156       268<br>   
-X       X:1188454|1188569   1188454    1188569   chrX|1188454,1188460|1188459,1188569|+          Full            +       2           6,110         116<br>   
-10      10:5794885|5800705   5794885    5800705   chr10|5794885,5800598|5795019,5800705|-       Full            -       2           135,108       243<br>   
-2       2:112299849|112300029  112299849  112300029  chr2|112299849|112300029|+                      Full            +       1           181           181<br>   
-19      19:20934024|20935047  20934024   20935047   chr19|20934024,20934949|20934150,20935047|+   Full            +       2           127,99        226<br>   
-12      12:75538109|75538245  75538109   75538245   chr12|75538109|75538245|+                     Full            +       1           137           137<br>   
-4       4:185916779|185916890  185916779  185916890  chr4|185916779|185916890|-                  Full            -       1           112           112<br>           
-</div>
+            <table class="data-example" border="1" style="border-collapse: collapse; width: 100%;">  
+                <thead>  
+                    <tr>  
+                        <th>chr</th>  
+                        <th>bsj</th>  
+                        <th>start</th>  
+                        <th>end</th>  
+                        <th>isoformID</th>  
+                        <th>isoform_state</th>  
+                        <th>strand</th>  
+                        <th>exon_count</th>  
+                        <th>exon_length</th>  
+                        <th>exon_total_length</th>  
+                    </tr>  
+                </thead>  
+                <tbody>  
+                    <tr>  
+                        <td>5</td>  
+                        <td>5:73074742|73077493</td>  
+                        <td>73074742</td>  
+                        <td>73077493</td>  
+                        <td>chr5|73074742,73077338|73074853,73077493|+</td>  
+                        <td>Full</td>  
+                        <td>+</td>  
+                        <td>2</td>  
+                        <td>112,156</td>  
+                        <td>268</td>  
+                    </tr>  
+                    <tr>  
+                        <td>X</td>  
+                        <td>X:1188454|1188569</td>  
+                        <td>1188454</td>  
+                        <td>1188569</td>  
+                        <td>chrX|1188454,1188460|1188459,1188569|+</td>  
+                        <td>Full</td>  
+                        <td>+</td>  
+                        <td>2</td>  
+                        <td>6,110</td>  
+                        <td>116</td>  
+                    </tr>  
+                    <tr>  
+                        <td>10</td>  
+                        <td>10:5794885|5800705</td>  
+                        <td>5794885</td>  
+                        <td>5800705</td>  
+                        <td>chr10|5794885,5800598|5795019,5800705|-</td>  
+                        <td>Full</td>  
+                        <td>-</td>  
+                        <td>2</td>  
+                        <td>135,108</td>  
+                        <td>243</td>  
+                    </tr>  
+                    <tr>  
+                        <td>2</td>  
+                        <td>2:112299849|112300029</td>  
+                        <td>112299849</td>  
+                        <td>112300029</td>  
+                        <td>chr2|112299849|112300029|+</td>  
+                        <td>Full</td>  
+                        <td>+</td>  
+                        <td>1</td>  
+                        <td>181</td>  
+                        <td>181</td>  
+                    </tr>  
+                    <tr>  
+                        <td>19</td>  
+                        <td>19:20934024|20935047</td>  
+                        <td>20934024</td>  
+                        <td>20935047</td>  
+                        <td>chr19|20934024,20934949|20934150,20935047|+</td>  
+                        <td>Full</td>  
+                        <td>+</td>  
+                        <td>2</td>  
+                        <td>127,99</td>  
+                        <td>226</td>  
+                    </tr>  
+                    <tr>  
+                        <td>12</td>  
+                        <td>12:75538109|75538245</td>  
+                        <td>75538109</td>  
+                        <td>75538245</td>  
+                        <td>chr12|75538109|75538245|+</td>  
+                        <td>Full</td>  
+                        <td>+</td>  
+                        <td>1</td>  
+                        <td>137</td>  
+                        <td>137</td>  
+                    </tr>  
+                    <tr>  
+                        <td>4</td>  
+                        <td>4:185916779|185916890</td>  
+                        <td>185916779</td>  
+                        <td>185916890</td>  
+                        <td>chr4|185916779|185916890|-</td>  
+                        <td>Full</td>  
+                        <td>-</td>  
+                        <td>1</td>  
+                        <td>112</td>  
+                        <td>112</td>  
+                    </tr>  
+                </tbody>  
+            </table>
 
             <h3>3.2 Generate CircRNA Reference for Human Blood</h3>  
             <p>Use the following script to generate the final circRNA reference list:</p>  
