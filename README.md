@@ -6,15 +6,40 @@ For detailed documentation, please visit the [Project Documentation](https://nju
 
 <h1><strong><em>USAGE</em></strong></h1>
 
-<h2><strong><em>Requirements</em></strong></h2>
-<ul>
-    <li>Linux</li>
-    <li>R</li>
-    <li>Python</li>
-    <li>Java</li>
-    <li>Sratoolkit</li>
-    <li>BWA</li>
-    <li>Salmon</li>
+<h2><strong><em>Requirements</em></strong></h2>  
+<ul>  
+    <li>Linux</li>  
+    <li>R</li>  
+    <li>Python</li>  
+    <li>Java</li>  
+    <li>Sratoolkit</li>  
+    <li>BWA</li>  
+    <li>Salmon</li>  
+</ul>  
+
+<h3><strong>Required R Packages</strong></h3>  
+<p>The following R packages are required for the circular RNA analysis:</p>  
+<ul>  
+    <li>DT</li>  
+    <li>FactoMineR</li>  
+    <li>clusterProfiler</li>  
+    <li>cowplot</li>  
+    <li>dplyr</li>  
+    <li>ggVennDiagram</li>  
+    <li>ggplot2</li>  
+    <li>ggrepel</li>  
+    <li>ggforce</li>  
+    <li>ggh4x</li>  
+    <li>ggvenn</li>  
+    <li>patchwork</li>  
+    <li>plyr</li>  
+    <li>pheatmap</li>  
+    <li>rtracklayer</li>  
+    <li>msigdbr</li>  
+    <li>stringr</li>  
+    <li>tidyr</li>  
+    <li>factoextra</li>  
+    <li>VennDiagram</li>  
 </ul>
 
 <h2><strong><em>Data</em></strong></h2>
