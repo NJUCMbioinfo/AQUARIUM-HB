@@ -5,4 +5,4 @@ A bioformatics pipeline to identify, annotate, quantify and analyze human blood 
 https://njucmbioinfo.github.io/AQUARIUM-HB/
 
 
-<h1><strong><em>How to useAQUARIUM-HB</em></strong></h1>
+<h1><strong><em>How to use AQUARIUM-HB</em></strong></h1>
