@@ -18,7 +18,7 @@ For detailed documentation, please visit the [Project Documentation](https://nju
 </ul>  
 
 <h3><strong>Required R Packages</strong></h3>  
-<p>The following R packages are required for the circular RNA analysis:</p>  
+<p>The following R packages are required:</p>  
 <ul>  
     <li>DT</li>  
     <li>FactoMineR</li>  
