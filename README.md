@@ -50,7 +50,7 @@ For detailed documentation, please visit the [Project Documentation](https://nju
     <li>Blood source</li>
 </ul>
 
-<h2><strong><em>Usage</em></strong></h2>
+<h2><strong><em>Steps</em></strong></h2>
 <ol>
     <li>Detect circRNA from RNA-seq Data.</li>
     <li>Construct a reference set of human blood full-length circRNAs.</li>
