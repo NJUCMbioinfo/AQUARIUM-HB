@@ -19,7 +19,6 @@ For detailed documentation, please visit the [Project Documentation](https://nju
 
 <h2><strong><em>Data</em></strong></h2>
 <p>You need to download high-throughput RNA-seq data that meets the following criteria:</p>
-<p><strong>Criteria:</strong></p>
 <ul>
     <li>rRNA-depleted</li>
     <li>Paired-end</li>
@@ -27,7 +26,6 @@ For detailed documentation, please visit the [Project Documentation](https://nju
 </ul>
 
 <h2><strong><em>Usage</em></strong></h2>
-<p>Follow these steps to utilize the AQUARIUM-HB pipeline:</p>
 <ol>
     <li>Detect circRNA from RNA-seq Data.</li>
     <li>Construct a reference set of human blood full-length circRNAs.</li>
