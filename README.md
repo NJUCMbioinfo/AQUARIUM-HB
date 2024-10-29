@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh">
 
-<head>
-    <meta charset="UTF-8">
-    <title>AQUARIUM-HB</title>
-</head>
-
 <body>
 
 <h1><strong><em>AQUARIUM-HB</em></strong></h1>  
