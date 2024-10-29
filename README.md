@@ -45,13 +45,6 @@ For detailed documentation, please visit the [Project Documentation](https://nju
     }  
 </style>  
 
-<style>  
-    ul {  
-        list-style-type: none; /* 去掉默认的项目符号 */  
-        padding-left: 0; /* 去掉左侧缩进 */  
-    }  
-</style>  
-
 <h2><strong><em>Steps</em></strong></h2>  
 <ul>  
     <li>Detect circRNA from RNA-seq Data.</li>  
