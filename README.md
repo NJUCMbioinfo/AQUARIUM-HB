@@ -1,10 +1,10 @@
-<h1><strong><em>AQUARIUM-HB</em></strong></h1>
+<h1><strong><em>AQUARIUM-HB</em></strong></h1>  
 
-A bioinformatics pipeline to identify, annotate, quantify, and analyze human blood circular RNAs from RNA-seq data.
+<p>A bioinformatics pipeline to identify, annotate, quantify, and analyze human blood circular RNAs from RNA-seq data.</p>  
 
-For detailed documentation, please visit the [Project Documentation](https://njucmbioinfo.github.io/AQUARIUM-HB/).
+<p>For detailed documentation, please visit the <a href="https://njucmbioinfo.github.io/AQUARIUM-HB/">Project Documentation</a>.</p>  
 
-<h1><strong><em>USAGE</em></strong></h1>
+<h1><strong><em>USAGE</em></strong></h1>  
 
 <h2><strong><em>Requirements</em></strong></h2>  
 <ul>  
@@ -28,20 +28,20 @@ For detailed documentation, please visit the [Project Documentation](https://nju
     <li>msigdbr</li>  
     <li>tidyr</li>  
     <li>factoextra</li>  
-</ul>
+</ul>  
 
-<h2><strong><em>Data</em></strong></h2>
-<p>You need to download high-throughput RNA-seq data that meets the following criteria:</p>
-<ul>
-    <li>rRNA-depleted</li>
-    <li>Paired-end</li>
-    <li>Blood source</li>
-</ul>
+<h2><strong><em>Data</em></strong></h2>  
+<p>You need to download high-throughput RNA-seq data that meets the following criteria:</p>  
+<ul>  
+    <li>rRNA-depleted</li>  
+    <li>Paired-end</li>  
+    <li>Blood source</li>  
+</ul>  
 
 <style>  
     ul, ol {  
-        list-style-type: none; /* 去掉默认的项目符号或编号 */  
-        padding-left: 0; /* 去掉左侧缩进 */  
+        list-style-type: none; 
+        padding-left: 0; 
     }  
 </style>  
 
