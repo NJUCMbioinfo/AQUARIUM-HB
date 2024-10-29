@@ -41,11 +41,14 @@ For detailed documentation, please visit the [Project Documentation](https://nju
 <h2><strong><em>Steps</em></strong></h2>  
 <ol>  
     <li>Detect circRNA from RNA-seq Data.</li>  
-    <li><em>Run the following command:</em></li>  
-    <code><em>sh pipeline_detection.sh -1 [sample_1.fastq or sample_1.fastq.gz] -2 [sample_2.fastq or sample_2.fastq.gz]</em></code>  
+    <li>  
+        <div style="overflow-x: auto; white-space: nowrap;">  
+            <code><em>sh pipeline_detection.sh -1 [sample_1.fastq or sample_1.fastq.gz] -2 [sample_2.fastq or sample_2.fastq.gz]</em></code>  
+        </div>  
+    </li>  
     <li>Construct a reference set of human blood full-length circRNAs.</li>  
     <li>Reconstruct incomplete circRNAs.</li>  
     <li>Annotate human blood full-length circRNAs.</li>  
     <li>Quantify human blood full-length circRNAs.</li>  
     <li>Perform Expression Analysis of human blood full-length circRNAs.</li>  
-</ol>  
+</ol>
