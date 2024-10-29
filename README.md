@@ -38,8 +38,15 @@ For detailed documentation, please visit the [Project Documentation](https://nju
     <li>Blood source</li>
 </ul>
 
+<style>  
+    ul, ol {  
+        list-style-type: none; /* 去掉默认的项目符号或编号 */  
+        padding-left: 0; /* 去掉左侧缩进 */  
+    }  
+</style>  
+
 <h2><strong><em>Steps</em></strong></h2>  
-<ul>  
+<ol>  
     <li>Detect circRNA from RNA-seq Data.</li>  
     <li>  
         <div style="overflow-x: auto; white-space: nowrap; width: 100%; border: 1px solid #ccc; padding: 5px;">  
@@ -55,4 +62,4 @@ For detailed documentation, please visit the [Project Documentation](https://nju
     <li>Annotate human blood full-length circRNAs.</li>  
     <li>Quantify human blood full-length circRNAs.</li>  
     <li>Perform Expression Analysis of human blood full-length circRNAs.</li>  
-</ul>
+</ol>
