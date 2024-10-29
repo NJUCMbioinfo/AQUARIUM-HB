@@ -43,11 +43,11 @@ For detailed documentation, please visit the [Project Documentation](https://nju
     <li>Detect circRNA from RNA-seq Data.</li>  
     <li>  
         <div style="overflow-x: auto; white-space: nowrap; width: 100%; border: 1px solid #ccc; padding: 5px;">  
-            <code><em>sh pipeline_detection.sh -1 sample_1.fastq -2 sample_2.fastq </em></code>  
+            <code><em>sh pipeline_detection.sh -1 sample_1.fastq -2 sample_2.fastq</em></code>  
             <br>  
             <span>or</span>  
             <br>  
-            <code><em>sh pipeline_detection.sh -1 sample_1.fastq.gz -2 sample_2.fastq.gz </em></code>   
+            <code><em>sh pipeline_detection.sh -1 sample_1.fastq.gz -2 sample_2.fastq.gz</em></code>   
         </div>  
     </li>  
     <li>Construct a reference set of human blood full-length circRNAs.</li>  
@@ -55,4 +55,4 @@ For detailed documentation, please visit the [Project Documentation](https://nju
     <li>Annotate human blood full-length circRNAs.</li>  
     <li>Quantify human blood full-length circRNAs.</li>  
     <li>Perform Expression Analysis of human blood full-length circRNAs.</li>  
-</ol>
+</ol> 
