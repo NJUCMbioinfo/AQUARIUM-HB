@@ -1,3 +1,18 @@
+<!DOCTYPE html>  
+<html lang="zh">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>AQUARIUM-HB</title>  
+    <style>  
+        ul, ol {  
+            list-style-type: none; /* 去掉默认的项目符号或编号 */  
+            padding-left: 0; /* 去掉左侧缩进 */  
+        }  
+    </style>  
+</head>  
+<body>  
+
 <h1><strong><em>AQUARIUM-HB</em></strong></h1>  
 
 <p>A bioinformatics pipeline to identify, annotate, quantify, and analyze human blood circular RNAs from RNA-seq data.</p>  
@@ -38,23 +53,12 @@
     <li>Blood source</li>  
 </ul>  
 
-<style>  
-    ul, ol {  
-        list-style-type: none; 
-        padding-left: 0; 
-    }  
-</style>  
-
 <h2><strong><em>Steps</em></strong></h2>  
 <ul>  
     <li>Detect circRNA from RNA-seq Data.</li>  
     <li>  
         <div style="overflow-x: auto; white-space: nowrap; width: 100%; border: 1px solid #ccc; padding: 5px;">  
-            <code><em>sh pipeline_detection.sh -1 sample_1.fastq -2 sample_2.fastq</em></code>  
-            <br>  
-            <span>or</span>  
-            <br>  
-            <code><em>sh pipeline_detection.sh -1 sample_1.fastq.gz -2 sample_2.fastq.gz</em></code>   
+            <code><em>sh pipeline_detection.sh -1 sample_1.fastq -2 sample_2.fastq</em></code>    
         </div>  
     </li>  
     <li>Construct a reference set of human blood full-length circRNAs.</li>  
@@ -62,4 +66,7 @@
     <li>Annotate human blood full-length circRNAs.</li>  
     <li>Quantify human blood full-length circRNAs.</li>  
     <li>Perform Expression Analysis of human blood full-length circRNAs.</li>  
-</ul>
+</ul>  
+
+</body>  
+</html>
