@@ -45,7 +45,7 @@
     <li>Detect circRNA from RNA-seq Data.</li>  
     <li>  
         <div style="overflow-x: auto; white-space: nowrap; width: 100%; border: 1px solid #ccc; padding: 5px;">  
-            <code><em>sh AQUARIUM_HB.sh -1 sample_1.fastq -2 sample_2.fastq</em></code>  
+            <code><em>sh AQUARIUM_HB.sh detect -1 sample_1.fastq -2 sample_2.fastq</em></code>  
         </div>  
     </li>  
     <li>Construct a reference set of human blood full-length circRNAs.</li>  
@@ -67,6 +67,7 @@
         </div>  
     </li>  
 </ul>  
+
 
 </body>  
 </html>
