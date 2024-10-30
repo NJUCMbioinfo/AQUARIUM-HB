@@ -130,7 +130,14 @@
     <main>  
         <section id="overview">  
             <h2>Overview</h2>  
-            <p>This document describes the complete process of identifying, annotating, quantifying, and analyzing circular RNAs from RNA-seq data in human blood.</p>  
+            <p>This document describes the complete process of identifying, annotating, quantifying, and analyzing circular RNAs from RNA-seq data in human blood.</p><br> 
+
+            <p> $ sh AQUARIUM_HB.sh detect --fastq1 SRR6450118_1.fastq.gz --fastq2 SRR6450118_2.fastq.gz --outdir SRR6450118 </p><br> 
+            <p> $ sh AQUARIUM_HB.sh reference --stoutlist_path stout.list_path.txt --reference_file SRR6450118/ReferenceSet.txt </p><br> 
+            <p> $ sh AQUARIUM_HB.sh reconstruct --cirireport_file SRR6450118/full/ciri.report --stoutlist_file SRR6450118/vis/stout.list --reference_file SRR6450118/ReferenceSet.txt --outputdir SRR6450118 </p><br> 
+            <p> $ sh AQUARIUM_HB.sh quant --fastq1 SRR6450118_1.fastq.gz --fastq2 SRR6450118_2.fastq.gz --gtfdir SRR6450118 --quantdir SRR6450118/quant </p><br> 
+            
+
         </section>  
 
         <section id="download">  
