@@ -40,33 +40,46 @@
     <li>Blood source</li>  
 </ul>  
 
-<h2><strong>Steps</strong></h2>  
+<h2><strong>Quick Start</strong></h2>  
 <ul>  
     <li>  
         <strong>Detect circRNA from RNA-seq Data.</strong>  
         <div class="code-container">  
-            <code>sh AQUARIUM_HB.sh detect --fastq1 &lt;sample_1.fastq.gz&gt; --fastq2 &lt;sample_2.fastq.gz&gt; --outdir &lt;outdir&gt;</code>  
+            <code>sh AQUARIUM_HB.sh detect <br>  
+            --fastq1 &lt;sample_1.fastq.gz&gt; <br>  
+            --fastq2 &lt;sample_2.fastq.gz&gt; <br>  
+            --outdir &lt;outdir&gt;</code>  
         </div>  
     </li>  
     <li>  
         <strong>Construct a reference set of human blood full-length circRNAs.</strong>  
         <div class="code-container">  
-            <code>sh AQUARIUM_HB.sh reference --stoutlist_path &lt;inputfile&gt; --reference_file &lt;outputfile&gt;</code>  
+            <code>sh AQUARIUM_HB.sh reference <br>  
+            --stoutlist_path &lt;inputfile&gt; <br>  
+            --reference_file &lt;outputfile&gt;</code>  
         </div>  
     </li>  
     <li>  
         <strong>Reconstruct incomplete circRNAs.</strong>  
         <div class="code-container">  
-            <code>sh AQUARIUM_HB.sh reconstruct --cirireport_file &lt;cirireport&gt; --stoutlist_file &lt;stoutlist&gt; --reference_file &lt;reference&gt; --outputdir &lt;outputdir&gt;</code>  
+            <code>sh AQUARIUM_HB.sh reconstruct <br>  
+            --cirireport_file &lt;cirireport&gt; <br>  
+            --stoutlist_file &lt;stoutlist&gt; <br>  
+            --reference_file &lt;reference&gt; <br>  
+            --outputdir &lt;outputdir&gt;</code>  
         </div>  
     </li>  
     <li>  
         <strong>Quantify human blood full-length circRNAs.</strong>  
         <div class="code-container">  
-            <code>sh AQUARIUM_HB.sh quant --fastq1 &lt;sample_1.fastq.gz&gt; --fastq2 &lt;sample_2.fastq.gz&gt; --gtfdir &lt;gtfdir&gt; --quantdir &lt;quantdir&gt;</code>  
+            <code>sh AQUARIUM_HB.sh quant <br>  
+            --fastq1 &lt;sample_1.fastq.gz&gt; <br>  
+            --fastq2 &lt;sample_2.fastq.gz&gt; <br>  
+            --gtfdir &lt;gtfdir&gt; <br>  
+            --quantdir &lt;quantdir&gt;</code>  
         </div>  
     </li>  
-</ul>  
+</ul> 
 
 </body>  
 </html>
