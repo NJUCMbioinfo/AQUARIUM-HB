@@ -40,6 +40,13 @@
     <li>Blood source</li>  
 </ul>  
 
+<p>Following files are required:</p>  
+<ul>  
+    <li>All circRNAs from FLcircAS database (download link in detailed documentation page)</li>  
+    <li>All circRNAs from IsoCirc database (download link in detailed documentation page)</li>  
+    <li>Blood source</li>  
+</ul>  
+
 <h2><strong>Quick Start</strong></h2>  
 <ul>  
     <li>  
