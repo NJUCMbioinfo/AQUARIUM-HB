@@ -44,7 +44,7 @@
 <ul>  
     <li>All circRNAs from FLcircAS database (download link: <a href="https://drive.google.com/file/d/1jjMEzCEEaUaUHrJZLME5O5_8fbsmYU6q/view?usp=drive_link" target="_blank">FLcircAS Download</a>)</li>  
     <li>All circRNAs from IsoCirc database (download link: <a href="https://drive.google.com/file/d/1oLk3MDw4kTZDzO7iA9nSNmDLoKqKxYSx/view?usp=drive_link" target="_blank">IsoCirc Download</a>)</li>  
-    <li>Human reference genome (fasta, hg38) (Align index files shound be generated using "bwa index *.fasta")</li>  
+    <li>Human reference genome (fasta, hg38) (Align index files shound be generated using "bwa index")</li>  
     <li>Human gene annotation (gtf, hg38)</li>  
 </ul>
 
