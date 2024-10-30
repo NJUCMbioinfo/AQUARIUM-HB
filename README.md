@@ -20,7 +20,7 @@
     <li>Salmon</li>  
 </ul>  
 
-<h3><strong>Required R Packages</strong></h3>  
+<h3><strong><em>Required R Packages</em></strong></h3>  
 <ul>  
     <li>FactoMineR</li>  
     <li>clusterProfiler</li>  
@@ -32,7 +32,7 @@
     <li>factoextra</li>  
 </ul>  
 
-<h2><strong><em>Data</em></strong></h2>  
+<h3><strong><em>Data</em></strong></h3>
 <p>You need to download high-throughput RNA-seq data that meets the following criteria:</p>  
 <ul>  
     <li>rRNA-depleted</li>  
@@ -48,7 +48,7 @@
     <li>Human gene annotation (gtf, hg38)</li>  
 </ul>
 
-<h2><strong>Quick Start</strong></h2>  
+<h3><strong><em>Quick Start<em></strong></h3>  
 <ul>  
     <li>  
         <strong>Detect circRNA from RNA-seq data.</strong>  
