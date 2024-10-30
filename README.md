@@ -44,7 +44,8 @@
 <ul>  
     <li>All circRNAs from FLcircAS database (download link in detailed documentation page)</li>  
     <li>All circRNAs from IsoCirc database (download link in detailed documentation page)</li>  
-    <li>Blood source</li>  
+    <li>Human reference genome (fasta,hg38) </li>  
+    <li>Human gene annotation (gtf,hg38) </li>  
 </ul>  
 
 <h2><strong>Quick Start</strong></h2>  
