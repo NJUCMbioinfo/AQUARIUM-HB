@@ -155,12 +155,14 @@
         <section id="reference">  
             <h2>3. Construct Reference Library for Human Blood circRNA</h2>  
             <p>The goal of this step is to build a comprehensive reference library containing information from full-length circRNAs.</p>  
-            <code>$ sh AQUARIUM_HB.sh reference --stoutlist_path stout.list_path.txt --reference_file ReferenceSet.txt </code>  
+            <div class="code-block">  
+            <code>$ sh AQUARIUM_HB.sh reference --stoutlist_path stout.list_path.txt --reference_file ReferenceSet.txt </code>
+            </div>     
             
             <h3>3.1 Integrate Full-length circRNA from CIRI Output</h3>  
             <p>Execute the following command to integrate the full-length circRNA obtained from CIRI output:</p>  
             <div class="code-block">  
-                <code>$ Rscript PIPELINE_merge_cirifull_to_full.R --input inputfilepath.txt --output full_circRNA_sample.txt</code>  
+                <code>$ sh AQUARIUM_HB.sh reconstruct --cirireport_file SRR6450118/ciri.report --stoutlist_file SRR6450118/stout.list --reference_file SRR6450118/ReferenceSet.txt --outputdir SRR6450118 </code>  
             </div>  
             <p>This command effectively combines circRNA data from multiple samples for further analysis.</p>  
 
@@ -220,9 +222,7 @@ PRJNA352396/SRR4888624/detection/full/vis/stout.list
             <p>In this step, we aim to fill in the missing information of partial circRNAs to ensure data integrity.</p>  
             <p>Execute the following commands:</p>  
             <div class="code-block">  
-                <code>$ Rscript make.circRNA_full.gtf.sample.R SRR14240730</code><br>  
-                <code>$ Rscript make.circRNA_break.gtf.sample.R SRR14240730</code><br>  
-                <code>$ Rscript make.circRNA_only.gtf.sample.R SRR14240730</code>  
+                <code>$ sh AQUARIUM_HB.sh reconstruct --cirireport_file SRR6450118/ciri.report --stoutlist_file SRR6450118/stout.list --reference_file SRR6450118/ReferenceSet.txt --outputdir SRR6450118</code><br>  
             </div>  
             <p>These commands generate circRNA-related data corresponding to each sample, enhancing the accuracy and reliability of our dataset.</p>  
         </section>  
