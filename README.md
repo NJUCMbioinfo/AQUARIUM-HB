@@ -43,7 +43,7 @@
 <h2><strong>Quick Start</strong></h2>  
 <ul>  
     <li>  
-        <strong>Detect circRNA from RNA-seq Data.</strong>  
+        <strong>Detect circRNA from RNA-seq data.</strong>  
         <div class="code-container">  
             <code>sh AQUARIUM_HB.sh detect <br>  
             --fastq1 &lt;sample_1.fastq.gz&gt; <br>  
@@ -60,7 +60,7 @@
         </div>  
     </li>  
     <li>  
-        <strong>Reconstruct incomplete circRNAs.</strong>  
+        <strong>Reconstruct incomplete circRNAs from RNA-seq data.</strong>  
         <div class="code-container">  
             <code>sh AQUARIUM_HB.sh reconstruct <br>  
             --cirireport_file &lt;cirireport&gt; <br>  
@@ -70,7 +70,7 @@
         </div>  
     </li>  
     <li>  
-        <strong>Quantify human blood full-length circRNAs.</strong>  
+        <strong>Quantify human blood full-length circRNAs from RNA-seq data.</strong>  
         <div class="code-container">  
             <code>sh AQUARIUM_HB.sh quant <br>  
             --fastq1 &lt;sample_1.fastq.gz&gt; <br>  
