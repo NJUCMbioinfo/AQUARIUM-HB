@@ -1,4 +1,3 @@
-![校徽](https://github.com/user-attachments/assets/001cccaa-028d-4c63-8a64-7e775023f21d)
 <!DOCTYPE html>  
 <html lang="zh">  
 
