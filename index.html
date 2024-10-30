@@ -148,14 +148,15 @@
             <p>This step focuses on detecting circRNA from RNA-seq data using the downloaded sample dataset (Project ID: PRJNA722046).</p>  
             <p>You can execute detection using the following command:</p>  
             <div class="code-block">  
-                <code>$ sh AQUARIUM_HB.sh detect --fastq1 <sample_1.fastq.gz> --fastq2 <sample_2.fastq.gz> --outdir <outdir> </code>  
+                <code>$ sh AQUARIUM_HB.sh detect --fastq1 SRR6450118_1.fastq.gz --fastq2 SRR6450118_2.fastq.gz --outdir SRR6450118 </code>  
             </div>   
         </section>  
 
         <section id="reference">  
             <h2>3. Construct Reference Library for Human Blood circRNA</h2>  
             <p>The goal of this step is to build a comprehensive reference library containing information from full-length circRNAs.</p>  
-
+            <code>$ sh AQUARIUM_HB.sh reference --stoutlist_path stout.list_path.txt --reference_file ReferenceSet.txt </code>  
+            
             <h3>3.1 Integrate Full-length circRNA from CIRI Output</h3>  
             <p>Execute the following command to integrate the full-length circRNA obtained from CIRI output:</p>  
             <div class="code-block">  
