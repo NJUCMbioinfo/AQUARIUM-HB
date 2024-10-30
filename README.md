@@ -1,38 +1,6 @@
 <!DOCTYPE html>  
 <html lang="zh">  
 
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>AQUARIUM-HB Pipeline</title>  
-    <style>  
-        body {  
-            font-family: Arial, sans-serif;  
-            line-height: 1.6;  
-            padding: 10px;  
-        }  
-        h2, h3 {  
-            color: #333;  
-        }  
-        code {  
-            background-color: #f4f4f4;  
-            padding: 5px;  
-            border-radius: 4px;  
-        }  
-        .code-container {  
-            overflow-x: auto;  
-            white-space: nowrap;  
-            width: 100%;  
-            border: 1px solid #ccc;  
-            padding: 5px;  
-            margin: 10px 0;  
-        }  
-        ul {  
-            margin: 10px 0;  
-        }  
-    </style>  
-</head>  
-
 <body>  
 
 <h1><strong><em>AQUARIUM-HB</em></strong></h1>  
@@ -99,16 +67,6 @@
         </div>  
     </li>  
 </ul>  
-
-<h2><strong>Usage Template</strong></h2>  
-<div class="code-container">  
-    <code>Usage: $0 &lt;module&gt; &lt;args&gt;<br>  
-Modules:<br>  
-&nbsp;&nbsp;&nbsp;detect --fastq1 &lt;sample_1.fastq.gz&gt; --fastq2 &lt;sample_2.fastq.gz&gt; --outdir &lt;outdir&gt;<br>  
-&nbsp;&nbsp;&nbsp;reference --stoutlist_path &lt;inputfile&gt; --reference_file &lt;outputfile&gt;<br>  
-&nbsp;&nbsp;&nbsp;reconstruct --cirireport_file &lt;cirireport&gt; --stoutlist_file &lt;stoutlist&gt; --reference_file &lt;reference&gt; --outputdir &lt;outputdir&gt;<br>  
-&nbsp;&nbsp;&nbsp;quant --fastq1 &lt;sample_1.fastq.gz&gt; --fastq2 &lt;sample_2.fastq.gz&gt; --gtfdir &lt;gtfdir&gt; --quantdir &lt;quantdir&gt;</code>  
-</div>  
 
 </body>  
 </html>
