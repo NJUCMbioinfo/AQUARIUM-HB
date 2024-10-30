@@ -5,7 +5,7 @@
 
 <h1><strong><em>AQUARIUM-HB</em></strong></h1>  
 <p>A bioinformatics pipeline to identify, annotate, quantify, and analyze human blood circular RNAs from RNA-seq data.</p>  
-<p>For detailed documentation, please visit the <a href="https://njucmbioinfo.github.io/AQUARIUM-HB/">Project Documentation</a>.</p>  
+<!-- <p>For detailed documentation, please visit the <a href="https://njucmbioinfo.github.io/AQUARIUM-HB/">Project Documentation</a>.</p>  -->
 
 <h2><strong><em>USAGE</em></strong></h2>  
 
