@@ -96,7 +96,7 @@
 Documentation is available online at https://njucmbioinfo.github.io/AQUARIUM-HB/
 
 <h3><strong><em>Authors</em></strong></h3>  
-Authors: Shaoxun Yuan(yuanshaoxun@njucm.edu.cn), Wanjun Gu(wanjungu@njucm.edu.cn) <br>  
+Authors: Shaoxun Yuan(yuanshaoxun@njucm.edu.cn), Wanjun Gu(wanjungu@njucm.edu.cn)<br><br>  
 Maintainer: Shaoxun Yuan
 
 <h3><strong><em>Release Notes</em></strong></h3>  
