@@ -96,12 +96,15 @@
 Documentation is available online at https://njucmbioinfo.github.io/AQUARIUM-HB/
 
 Author
+
 Authors: Shaoxun Yuan(yuanshaoxun@njucm.edu.cn), Wanjun Gu(wanjungu@njucm.edu.cn)
 
 Maintainer: Shaoxun Yuan
 
 Release Notes
+
 version 1.0.0：Minor update
 
 Citing AQUARIUM-HB
+
 Shaoxun Yuan, Xue Bai, Linwei Li, Wanjun Gu. AQUARIUM_HB: a bioinformatics pipeline for human blood circular RNA analysis.
