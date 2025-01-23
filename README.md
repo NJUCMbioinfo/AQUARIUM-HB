@@ -12,8 +12,8 @@
 <h3><strong><em>Requirements</em></strong></h3>  
 <ul>  
     <li>Linux (CentOS >=7.6 or Ubuntu >=20.04)</li>  
-    <li>R (>= 4.0.0, 4.1.0)</li>  
-    <li>Python (>= 3.0.0, 3.8.10)</li>  
+    <li>R (>= 4.1.0)</li>  
+    <li>Python (>= 3.8.10)</li>  
     <li>Java (1.8.0_291)</li>  
     <li>Sratoolkit (2.11.3)</li>  
     <li>BWA (0.7.17)</li>  
