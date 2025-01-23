@@ -101,7 +101,7 @@ Maintainer: Shaoxun Yuan
 
 <h3><strong><em>Release Notes</em></strong></h3>  
 
-version 1.0.0：Minor update
+version 1.0.1：Minor update
 
 <h3><strong><em>Citing AQUARIUM-HB</em></strong></h3>  
 
