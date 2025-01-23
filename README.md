@@ -11,26 +11,26 @@
 
 <h3><strong><em>Requirements</em></strong></h3>  
 <ul>  
-    <li>Linux</li>  
-    <li>R</li>  
-    <li>Python</li>  
-    <li>Java</li>  
-    <li>Sratoolkit</li>  
-    <li>BWA</li>  
-    <li>Salmon</li>  
+    <li>Linux (CentOS 7.9)</li>  
+    <li>R (>= 4.0.0, 4.1.0)</li>  
+    <li>Python (>= 3.0.0, 3.8.10)</li>  
+    <li>Java (1.8.0_291)</li>  
+    <li>Sratoolkit (2.11.3)</li>  
+    <li>BWA (0.7.17)</li>  
+    <li>Salmon (1.5.0)</li>  
 </ul>  
 
 <h3><strong><em>Required R Packages</em></strong></h3>  
 <ul>  
-    <li>FactoMineR</li>  
-    <li>clusterProfiler</li>  
-    <li>dplyr</li>  
-    <li>plyr</li>  
-    <li>rtracklayer</li>  
-    <li>msigdbr</li>  
-    <li>tidyr</li>  
-    <li>factoextra</li>  
-</ul>  
+    <li>FactoMineR (2.4)</li>  
+    <li>clusterProfiler (3.18.1)</li>  
+    <li>dplyr (1.0.7)</li>  
+    <li>plyr (1.8.6)</li>  
+    <li>rtracklayer (1.52.0)</li>  
+    <li>msigdbr (7.2.1)</li>  
+    <li>tidyr (1.1.3)</li>  
+    <li>factoextra (1.0.7)</li>  
+</ul> 
 
 <h3><strong><em>Data</em></strong></h3>
 <p>You need to download high-throughput RNA-seq data that meets the following criteria:</p>  
